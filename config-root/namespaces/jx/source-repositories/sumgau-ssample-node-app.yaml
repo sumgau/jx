@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: sumgau
+    provider: github
+    repository: ssample-node-app
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: sumgau-ssample-node-app
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/sumgau/ssample-node-app.git
+  org: sumgau
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: ssample-node-app
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/sumgau/ssample-node-app
