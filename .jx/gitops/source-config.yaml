@@ -11,6 +11,7 @@ spec:
     - name: go
     - name: golang
     - name: golang-http
+    - name: node
     - name: node-http-1
     - name: ssample-node-app
     scheduler: in-repo
