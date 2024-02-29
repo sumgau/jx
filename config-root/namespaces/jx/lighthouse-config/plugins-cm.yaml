@@ -8,6 +8,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - sumgau/go
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - sumgau/golang-http
       require_self_approval: true
     - lgtm_acts_as_approve: true
@@ -17,6 +21,10 @@ data:
     - lgtm_acts_as_approve: true
       repos:
       - sumgau/node-http-1
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - sumgau/node
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
@@ -32,6 +40,11 @@ data:
         env/prow/plugins.yaml:
           name: plugins
     external_plugins:
+      sumgau/go:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
       sumgau/golang:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
@@ -43,6 +56,11 @@ data:
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
         name: lighthouse-webui-plugin
       sumgau/jx:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
+      sumgau/node:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
@@ -62,6 +80,20 @@ data:
       additional_labels: null
     owners: {}
     plugins:
+      sumgau/go:
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
       sumgau/golang:
       - approve
       - assign
@@ -92,6 +124,20 @@ data:
       - pony
       sumgau/jx:
       - config-updater
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
+      sumgau/node:
       - approve
       - assign
       - help
@@ -146,6 +192,9 @@ data:
       - sumgau/jx
       trusted_org: sumgau
     - repos:
+      - sumgau/go
+      trusted_org: sumgau
+    - repos:
       - sumgau/golang-http
       trusted_org: sumgau
     - repos:
@@ -153,6 +202,9 @@ data:
       trusted_org: sumgau
     - repos:
       - sumgau/node-http-1
+      trusted_org: sumgau
+    - repos:
+      - sumgau/node
       trusted_org: sumgau
     - repos:
       - sumgau/ssample-node-app

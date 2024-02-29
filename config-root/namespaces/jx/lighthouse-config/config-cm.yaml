@@ -7,9 +7,11 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        sumgau/go: true
         sumgau/golang: true
         sumgau/golang-http: true
         sumgau/jx: true
+        sumgau/node: true
         sumgau/node-http-1: true
         sumgau/ssample-node-app: true
     plank: {}
@@ -23,9 +25,11 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        sumgau/go: merge
         sumgau/golang: merge
         sumgau/golang-http: merge
         sumgau/jx: merge
+        sumgau/node: merge
         sumgau/node-http-1: merge
         sumgau/ssample-node-app: merge
       queries:
@@ -39,9 +43,11 @@ data:
         - needs-rebase
         repos:
         - sumgau/jx
+        - sumgau/go
         - sumgau/golang-http
         - sumgau/golang
         - sumgau/node-http-1
+        - sumgau/node
         - sumgau/ssample-node-app
       - labels:
         - updatebot
@@ -53,9 +59,11 @@ data:
         - needs-rebase
         repos:
         - sumgau/jx
+        - sumgau/go
         - sumgau/golang-http
         - sumgau/golang
         - sumgau/node-http-1
+        - sumgau/node
         - sumgau/ssample-node-app
       target_url: http://lighthouse-jx./merge/status
 kind: ConfigMap
