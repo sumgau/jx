@@ -65,7 +65,7 @@ data:
         - sumgau/node-http-1
         - sumgau/node
         - sumgau/ssample-node-app
-      target_url: http://lighthouse-jx./merge/status
+      target_url: http://lighthouse-jx.192.168.49.2.nip.io/merge/status
 kind: ConfigMap
 metadata:
   creationTimestamp: null
