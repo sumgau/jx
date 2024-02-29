@@ -12,6 +12,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - sumgau/golang
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - sumgau/node-http-1
       require_self_approval: true
     - lgtm_acts_as_approve: true
@@ -28,6 +32,11 @@ data:
         env/prow/plugins.yaml:
           name: plugins
     external_plugins:
+      sumgau/golang:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
       sumgau/golang-http:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
@@ -53,6 +62,20 @@ data:
       additional_labels: null
     owners: {}
     plugins:
+      sumgau/golang:
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
       sumgau/golang-http:
       - approve
       - assign
@@ -124,6 +147,9 @@ data:
       trusted_org: sumgau
     - repos:
       - sumgau/golang-http
+      trusted_org: sumgau
+    - repos:
+      - sumgau/golang
       trusted_org: sumgau
     - repos:
       - sumgau/node-http-1

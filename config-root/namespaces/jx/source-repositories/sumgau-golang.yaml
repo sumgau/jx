@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: sumgau
+    provider: github
+    repository: golang
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: sumgau-golang
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/sumgau/golang.git
+  org: sumgau
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: golang
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/sumgau/golang
