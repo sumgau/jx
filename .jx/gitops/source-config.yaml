@@ -13,6 +13,7 @@ spec:
     - name: golang-http
     - name: node
     - name: node-http-1
+    - name: node-repo
     - name: ssample-node-app
     scheduler: in-repo
   slack:
