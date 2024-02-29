@@ -8,6 +8,7 @@ spec:
     provider: https://github.com
     providerKind: github
     repositories:
+    - name: golang
     - name: golang-http
     - name: node-http-1
     - name: ssample-node-app
